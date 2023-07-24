@@ -1,0 +1,10 @@
+.map{
+    width: 50%;
+    text-align: center;
+    height: 100vh;
+}
+@media (max-width:750px){
+    .map{
+        width: 100%;
+    }
+}

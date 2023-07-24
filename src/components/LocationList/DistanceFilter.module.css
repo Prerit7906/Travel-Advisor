@@ -1,0 +1,15 @@
+.main{
+    position: relative;
+    width: 30%;
+    height: 12%;
+    background-color: rgba(212, 228, 249, 0.592);
+    margin: 0.5rem 0;
+}
+.infoIcon{
+    display: block;
+}
+@media (max-width:750px){
+    .main{
+        width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+.header{
+    padding: 1rem 0;
+}
+.box{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search{
+    position: relative;
+    width: 95%;
+    height: 70%;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: medium;
+    border: 2px solid white;
+    box-shadow: 0px 4px 4px 1px rgb(235, 222, 222);
+    padding: 0.5rem 1.2rem;
+}
+.searchIcon{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translate(0.5rem,-50%);
+    left: 0;
+    padding-left: 0.2rem;
+}
+.search:focus{
+    position: relative;
+    outline: none;
+    border: 2px solid black;
+    box-shadow: 0px 4px 11px 1px rgb(235, 222, 222);
+}
+.search:hover{
+    width: 100%;
+    padding: 0.5rem 2rem;
+    transition: bump 0.5s ease-in-out;
+}
+.date input{
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: medium;
+    padding: 0.5rem;
+    outline: none;
+}
+.date input:hover{
+    border-color: black;
+    box-shadow: 0px 4px 11px 1px rgb(235, 222, 222);
+}
+.filtertext{
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+}
+.filtertext p{
+    margin: 0.5rem;
+}
+.box select{
+    width: 70%;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+.box select:hover{
+    border: 2px solid black;
+}
