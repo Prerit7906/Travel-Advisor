@@ -3,7 +3,6 @@ import { configureStore } from "@reduxjs/toolkit";
 const initialState={
     items:[],
     number:0,
-    child:{},
     type:'',
     autoComplete:'',
     distance:'5'
@@ -14,10 +13,6 @@ const cartSlice=createSlice({
     reducers:{
         replaceCart(state,action){
             state.items=action.payload.items;
-            // state.number=action.payload.number;
-        },
-        childClicked(state,action){
-            state.child=action.payload;
         },
         setType(state,action){
             state.type=action.payload;

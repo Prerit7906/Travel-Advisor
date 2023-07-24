@@ -12,8 +12,6 @@ const LocationList = (props) => {
   const number=useSelector(state=>state.cart.number);
   const distance=useSelector(state=>state.cart.distance);
   const dispatch=useDispatch();
-  // const child=useSelector(state=>state.cart.child);
-  // console.log({child})
   const filteredItems=items.filter((item)=>item.distance<=distance);
   dispatch(cartActions.changeNumber(filteredItems.length));
   const listItem=filteredItems.map((item,index)=>{

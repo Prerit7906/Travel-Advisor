@@ -5,7 +5,6 @@ import { cartActions } from '../../store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Autocomplete } from '@react-google-maps/api';
-// import dateIcon from '../../assets/icons8-date-100.png'
 
 const MainHeader = (props) => {
     const [place,setPlace]=useState(null);
@@ -27,7 +26,6 @@ const MainHeader = (props) => {
         else {
             setIsHotel(false);
         }
-        // console.log(e.target.value);
         dispatch(cartActions.setType(e.target.value));
     };
     const placeChnageHandler=()=>{
