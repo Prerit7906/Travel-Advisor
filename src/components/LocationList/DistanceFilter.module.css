@@ -8,6 +8,11 @@
 .infoIcon{
     display: block;
 }
+@media (max-width:900px){
+    .main{
+        width: 85%;
+    }
+}
 @media (max-width:750px){
     .main{
         width: 100%;

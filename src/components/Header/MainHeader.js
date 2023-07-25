@@ -16,10 +16,12 @@ const MainHeader = (props) => {
     const searchFocusHandler = () => {
         const icon = document.getElementById('i');
         icon.style.display = 'block';
+        
     };
     const searchBlurHandler = () => {
         const icon = document.getElementById('i');
         icon.style.display = 'none';
+        
     };
     const filterChangeHandler = (e) => {
         if (e.target.value === 'hotels') {
@@ -43,7 +45,7 @@ const MainHeader = (props) => {
         setDate('date');
     }
     const dateBlurHandler=()=>{
-        if(isVal!=true){
+        if(isVal!==true){
         setDate('text');
         }
     }
@@ -72,7 +74,7 @@ const MainHeader = (props) => {
                             <FontAwesomeIcon id='i' className={classes.searchIcon} icon={faMagnifyingGlass} style={{ color: "#8d8d8d", display: "none" }} />
                             <input className={classes.search}
                                 onMouseOver={searchFocusHandler}
-                                onMouseLeave={searchBlurHandler}
+                                onMouseOut={searchBlurHandler}
                                 placeholder='Search here' type='search'></input>
                         </div>
                     </Autocomplete>

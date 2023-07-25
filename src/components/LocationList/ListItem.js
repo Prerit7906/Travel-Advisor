@@ -3,8 +3,9 @@ import imageFiller from '../../assets/image.jpg'
 import Chips from '../../ui/Chips';
 import classes from './ListItem.module.css'
 import Stars from '../../ui/Stars';
-import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhone,faArrowRight,faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import './ListItem.css';
 const List = (props) => {
   const item=props.item;
@@ -17,8 +18,16 @@ const List = (props) => {
   const city=item.address_obj?.city?`${item.address_obj.city},`:'';
   return (
     <div className={classes.listItem}>
-      <div className='card' style={{ border: "none" }}>
+  <div className='card' style={{ border: "none" }}>
+    <div className={classes.like}>
+  <FontAwesomeIcon className={classes.heart} icon={faHeart} style={{color:"black"}} />
+    </div>
+  <div className={classes.imagearrows} style={{position:"absolute"}}> 
+  <FontAwesomeIcon className={classes.icons} icon={faArrowLeft}  style={{color:"white"}}/>
+  <FontAwesomeIcon className={classes.icons} icon={faArrowRight}  style={{color:"white"}}/>
+  </div>
   <img src={item.photo ? item.photo.images.large.url : imageFiller} className="card-img" alt="Place_image" />
+
   <div className='card-body d-flex flex-column align-items-start py-0' >
     <div className={classes.nameNRating}>
       <div className='card-title' style={{lineHeight:'120%'}}>{props.index + 1 + '.'} {item.name}</div>
@@ -34,7 +43,6 @@ const List = (props) => {
     {item.address_obj? <div className={classes.address}>{city} {item.address_obj.country}</div>:item.location_string?<div className={classes.address}>{item.location_string}</div>:''}
     {splitPrice && <span className={classes.price}>Pricing from {splitPrice[0]} to {splitPrice[1]}</span>}
     {item.phone && <span className={classes.phone}><FontAwesomeIcon icon={faPhone} style={{color: "#117d52",}} />  {item.phone}</span>}
-    {item.email && <span className={classes.email}><FontAwesomeIcon icon={faEnvelope} style={{color: "#117d52",}} />  {item.email}</span>}
   </div>
 </div>
 

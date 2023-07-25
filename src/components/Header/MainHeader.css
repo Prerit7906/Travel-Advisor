@@ -1,6 +1,7 @@
 @media (max-width:962px) {
-    .col-1{
+    .col-1,#i{
         display: none;
+        
     }
     .row{
         display: flex;

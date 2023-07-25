@@ -12,7 +12,7 @@ export const fetchDataByBound = async(type,ne,sw) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '61620e6da1msh1e7def0ab01beb6p13a701jsn66c2f476180c',
+            'X-RapidAPI-Key': '64aa744578mshc5c4d3d32e008d1p1e02bajsn3dbe6043aecf',
 		    'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         }
     };
