@@ -1,5 +1,6 @@
 .header{
     padding: 1rem 0;
+    width: 100%;
 }
 .box{
     position: relative;
@@ -19,6 +20,8 @@
     border: 2px solid white;
     box-shadow: 0px 4px 4px 1px rgb(235, 222, 222);
     padding: 0.5rem 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(66, 66, 66);
 }
 .searchIcon{
     position: absolute;
@@ -31,21 +34,24 @@
 .search:focus{
     position: relative;
     outline: none;
-    border: 2px solid black;
     box-shadow: 0px 4px 11px 1px rgb(235, 222, 222);
 }
 .search:hover{
     width: 100%;
     padding: 0.5rem 2rem;
+    border: 1px solid grey;
     transition: bump 0.5s ease-in-out;
 }
 .date input{
+    width: 80%;
     border: 2px solid rgb(225, 225, 225);
     border-radius: 20px;
     cursor: pointer;
     font-size: medium;
     padding: 0.5rem;
     outline: none;
+    background: transparent;
+    z-index: 10;
 }
 .date input:hover{
     border-color: black;
@@ -67,4 +73,50 @@
 }
 .box select:hover{
     border: 2px solid black;
+}
+.calenderIcon{
+    position: absolute;
+    left: 12%;
+    height: 1rem;
+    width: 2rem;
+
+}
+.date input[type="text"]::placeholder{
+    text-align: center;
+    color: Black;
+    opacity: 1;
+    font-weight: 600;
+    font-size: small;
+}
+.date input[type="date"]{
+    text-align: center;
+    color: Black;
+    font-size: small;
+}
+@media (max-width:1078px) {
+    .date input[type="text"]::placeholder{
+        text-align: end;
+        
+    }
+    .date input{
+        padding-right: 0.7rem;
+    }
+}
+@media (max-width:962px){
+    .calenderIcon,.date{
+        display: none;
+    }
+    .box select{
+        width: 100%;
+        text-align: center;
+    }
+    .search{
+        border: 1px solid grey;
+    }
+}
+@media (max-width:506px){
+    .search{
+        width: 100%;
+    }
+    
 }

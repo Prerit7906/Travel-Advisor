@@ -3,6 +3,9 @@
     text-align: center;
     height: 100vh;
 }
+.locator:hover{
+    size: 5rem;
+}
 @media (max-width:750px){
     .map{
         width: 100%;

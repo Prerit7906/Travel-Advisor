@@ -1,0 +1,29 @@
+@media (max-width:962px) {
+    .col-1{
+        display: none;
+    }
+    .row{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .col-1,.col-2,.col-7{
+        margin: 0.5rem 0;
+    }
+    .date{
+        display: none;
+    }
+    .col-7{
+        width: 60%;
+    }
+    .filter{
+        width: 35%;
+    }
+}
+@media (max-width:506px){
+    .col-7,.filter{
+        width: 90%;
+    }
+    
+}

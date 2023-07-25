@@ -29,7 +29,7 @@ function App() {
       setIsLoading(false);
     });
   }
-    },[coordinates,bound,dispatch,type]);
+    },[bound,dispatch,type]);
   
   return (
     <Fragment>

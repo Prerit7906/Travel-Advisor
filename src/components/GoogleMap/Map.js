@@ -16,7 +16,7 @@ const Map = (props) => {
       bootstrapURLKeys={{key:'AIzaSyDccLXsKA6yrkSATYZf426v9218glcNiTw'}}
       defaultCenter={{lat:0,lng:0}}
       center={props.coordinates}
-      defaultZoom={13}
+      defaultZoom={10}
       margin={[50,50,50,50]}
       options={''}
       onChange={mapChangeHandler}
@@ -24,7 +24,7 @@ const Map = (props) => {
     >
       {locations?.map((location,index)=>(
         <div lat={Number(location.latitude)} lng={Number(location.longitude)} key={`marker-${index}`}>
-          <FontAwesomeIcon icon={faLocationDot} style={{color: "rgb(4, 76, 48)", height:"2.5rem"}} />
+          <FontAwesomeIcon className={classes.locator} icon={faLocationDot} style={{color: "rgb(4, 76, 48)", height:"2.5rem"}} />
         </div>
       ) 
     )}
