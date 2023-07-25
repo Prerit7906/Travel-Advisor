@@ -1,6 +1,7 @@
 //fetching the data using async await
 export const fetchDataByBound = async(type,ne,sw) => {
     let url='';
+    //checking which filter is selected
     if(type==='attractions'){
         url = `https://travel-advisor.p.rapidapi.com/attractions/list-in-boundary?tr_longitude=${ne.lng}&tr_latitude=${ne.lat}&bl_longitude=${sw.lng}&bl_latitude=${sw.lat}&currency=USD&lunit=km&lang=en_US`;
     } else if(type==='hotels'){
@@ -22,7 +23,7 @@ export const fetchDataByBound = async(type,ne,sw) => {
         const result = await response.json();
         return result.data;
     } catch (error) {
-        console.error(error);
+        console.log(error);
         return [];
     }
 }

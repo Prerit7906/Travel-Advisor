@@ -71,11 +71,11 @@ const MainHeader = (props) => {
                 <div className='col-7'>
                     <Autocomplete onLoad={(value) => { setPlace(value) }} onPlaceChanged={placeChnageHandler}>
                         <div className={classes.box}>
-                            <FontAwesomeIcon id='i' className={classes.searchIcon} icon={faMagnifyingGlass} style={{ color: "#8d8d8d", display: "none" }} />
+                            <FontAwesomeIcon id='i' className={classes.searchIcon} icon={faMagnifyingGlass} style={{ color: "rgb(65, 65, 65)", display: "none" }} />
                             <input className={classes.search}
                                 onMouseOver={searchFocusHandler}
                                 onMouseOut={searchBlurHandler}
-                                placeholder='Search here' type='search'></input>
+                                placeholder='Where to?' type='search'></input>
                         </div>
                     </Autocomplete>
                 </div>

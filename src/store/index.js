@@ -5,7 +5,8 @@ const initialState={
     number:0,
     type:'',
     autoComplete:'',
-    distance:'5'
+    distance:'5',
+    status:null
 };
 const cartSlice=createSlice({
     name:'cart',
@@ -25,6 +26,9 @@ const cartSlice=createSlice({
         },
         changeNumber(state,action){
             state.number=action.payload;
+        },
+        setStatus(state,action){
+            state.status=action.payload;
         }
     }
 });
