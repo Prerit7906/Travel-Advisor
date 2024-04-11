@@ -13,6 +13,7 @@ function App() {
   const [bound,setBound]=useState({});
   const [isLoading,setIsLoading]=useState(false);
   const dispatch=useDispatch();
+  console.log("jhkj");
   useEffect(()=>{
     //Getting the the current location when the page reloads
     navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude}})=>{
